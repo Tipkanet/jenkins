@@ -48,7 +48,7 @@ public class RegistrationFormTest extends TestBase {
         registrationPage.setHobby(hobbySport);
         registrationPage.setHobby(hobbyReading);
 
-        registrationPage.uploadPicture(filePath + fileName);
+        //registrationPage.uploadPicture(filePath + fileName);
 
         String address = faker.shakespeare().asYouLikeItQuote();
         registrationPage.typeAddress(address);
