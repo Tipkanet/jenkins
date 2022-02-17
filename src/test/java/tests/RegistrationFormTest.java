@@ -48,7 +48,7 @@ public class RegistrationFormTest extends TestBase {
         registrationPage.setHobby(hobbySport);
         registrationPage.setHobby(hobbyReading);
 
-        //TODO uploadPicture doesn't work
+        //TODO_uploadPicture doesn't work
         // registrationPage.uploadPicture(filePath + fileName);
 
         String address = faker.shakespeare().asYouLikeItQuote();
@@ -65,7 +65,7 @@ public class RegistrationFormTest extends TestBase {
                 .checkResultValue("Student Email", (email))
                 .checkResultValue("Gender", (gender))
                 .checkResultValue("Mobile", (phone))
-               //TODO .checkResultValue("Picture", (fileName))
+               //TODO_.checkResultValue("Picture", (fileName))
                 .checkResultValue("Address", (address))
                 .checkResultValue("State and City", (state + " " + city));
     }

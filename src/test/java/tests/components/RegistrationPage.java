@@ -72,6 +72,8 @@ public class RegistrationPage {
     }
 
     public void uploadPicture (String fileName) {
+
+        //TODO посмотреть, что выдавал в логе - почему не загружается картинка
         pictureUpload.uploadFromClasspath(fileName);
     }
 

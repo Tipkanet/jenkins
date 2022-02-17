@@ -15,6 +15,7 @@ import static io.qameta.allure.selenide.LogType.BROWSER;
 
 public class Attach {
 
+    // аттач некоторого текста: attachName - название аттача и message - текст сообщения
     @Attachment(value = "{attachName}", type = "text/plain")
     public static String attachAsText(String attachName, String message) {
         return message;
@@ -37,6 +38,8 @@ public class Attach {
         );
     }
 
+    // attach video
+    // form html-code with video
     @Attachment(value = "Video", type = "text/html", fileExtension = ".html")
     public static String addVideo() {
         return "<html><body><video width='100%' height='100%' controls autoplay><source src='"
@@ -44,6 +47,7 @@ public class Attach {
                 + "' type='video/mp4'></video></body></html>";
     }
 
+    // make link to video
     public static URL getVideoUrl(String sessionId) {
         String videoUrl = "https://selenoid.autotests.cloud/video/" + sessionId + ".mp4";
 
@@ -55,6 +59,7 @@ public class Attach {
         return null;
     }
 
+    // get session Id
     public static String getSessionId(){
         return ((RemoteWebDriver) getWebDriver()).getSessionId().toString();
     }
