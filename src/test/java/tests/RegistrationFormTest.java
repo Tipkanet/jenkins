@@ -48,7 +48,8 @@ public class RegistrationFormTest extends TestBase {
         registrationPage.setHobby(hobbySport);
         registrationPage.setHobby(hobbyReading);
 
-        //registrationPage.uploadPicture(filePath + fileName);
+        //TODO uploadPicture doesn't work
+        // registrationPage.uploadPicture(filePath + fileName);
 
         String address = faker.shakespeare().asYouLikeItQuote();
         registrationPage.typeAddress(address);
@@ -64,10 +65,7 @@ public class RegistrationFormTest extends TestBase {
                 .checkResultValue("Student Email", (email))
                 .checkResultValue("Gender", (gender))
                 .checkResultValue("Mobile", (phone))
-                .checkResultValue("Date of Birth", (day + " " + month +  "," + year))
-                .checkResultValue("Subjects", (subjectOne + ", " + subjectTwo))
-                .checkResultValue("Hobbies", (hobbySport + ", " + hobbyReading))
-               // .checkResultValue("Picture", (fileName))
+               //TODO .checkResultValue("Picture", (fileName))
                 .checkResultValue("Address", (address))
                 .checkResultValue("State and City", (state + " " + city));
     }
